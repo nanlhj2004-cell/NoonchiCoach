@@ -1,0 +1,14 @@
+{
+  "student_id": "202439751",
+  "name": "이현지",
+  "title": "눈치코치 — 비꼼 판별 및 대화 대응 도우미",
+  "github_url": "https://github.com/nanlhj2004-cell/NoonchiCoach",
+  "demo_url": "https://pics-capacity-helpful-appliance.trycloudflare.com",
+  "data_type": "한국어 텍스트: KoCoSa 맥락+발언, Kocasm 외부 테스트",
+  "training": "TF-IDF + Logistic Regression 직접 학습 및 KoELECTRA Colab 파인튜닝·평가 완료; 기존 가중치로 Flask 추론 검증 완료",
+  "models": [
+    "TF-IDF + Logistic Regression",
+    "KoELECTRA (monologg/koelectra-base-v3-discriminator)"
+  ],
+  "primary_metric": "Macro F1"
+}

@@ -6,7 +6,7 @@
 
 학번 202439751 · 이름 이현지. 제출 안내의 필수 프로젝트 식별 정보로 기재한다.
 
-한국어 대화의 비꼼 표현 가능성을 분류하고 확인형 답변을 제안하는 개인 머신러닝 프로젝트다. 사용자가 Google Colab 학습·평가와 Flask KoELECTRA 추론 완료를 보고했다. 이번 점검에서 실제 평가 CSV와 가중치·토크나이저를 확인했다. 전용 Python 환경을 복구하고 실제 ElectraForSequenceClassification 로딩과 Flask 추론을 검증했다. [GitHub 공개 코드](https://github.com/nanlhj2004-cell/NoonchiCoach) · [임시 공개 데모](https://ran-lenses-success-painting.trycloudflare.com). 데모는 로컬 컴퓨터와 Flask 및 Cloudflare 터널이 실행 중인 동안 동작한다. 재시작 시 URL이 변경되므로 영구 호스팅은 별도로 확보해야 한다.
+한국어 대화의 비꼼 표현 가능성을 분류하고 확인형 답변을 제안하는 개인 머신러닝 프로젝트다. 사용자가 Google Colab 학습·평가와 Flask KoELECTRA 추론 완료를 보고했다. 이번 점검에서 실제 평가 CSV와 가중치·토크나이저를 확인했다. 전용 Python 환경을 복구하고 실제 ElectraForSequenceClassification 로딩과 Flask 추론을 검증했다. [GitHub 공개 코드](https://github.com/nanlhj2004-cell/NoonchiCoach) · [임시 공개 데모](https://pics-capacity-helpful-appliance.trycloudflare.com). 데모는 로컬 컴퓨터와 Flask 및 Cloudflare 터널이 실행 중인 동안 동작한다. 재시작 시 URL이 변경되므로 영구 호스팅은 별도로 확보해야 한다.
 
 ## 1. 문제 정의
 
@@ -33,7 +33,7 @@ KoCoSa 재배포 및 파인튜닝 가중치 공개 조건은 미확인이다. Ko
 
 ## 3. 데이터 전처리
 
-필수값 검증, NFC·공백 정규화, 중복·충돌 처리, 맥락과 마지막 발언의 입력 형식 통일을 구현했다. 문장부호와 말투를 보존하고 sarcasm_explanation은 학습 입력에서 제외한다. 기존 감사에서 필수 결측·정규화 입력 중복·레이블 충돌·분할 간 동일 입력은 모두 0건이다. 전후 클래스 분포와 건수는 위 표와 동일하다. 의미 기반 재서술 누수는 미검사다. 공식 분할을 유지하고 실험 seed는 42다.
+필수값 검증, NFC·공백 정규화, 중복·충돌 처리, 맥락과 마지막 발언의 입력 형식 통일을 구현했다. 문장부호와 말투를 보존하고 sarcasm_explanation은 학습 입력에서 제외한다. 기존 감사에서 필수 결측·정규화 입력 중복·레이블 충돌·분할 간 동일 입력은 모두 0건이다. 전후 클래스 분포와 건수는 위 표와 동일하다. 의미 기반 재서술 누수는 미검사다. 공식 분할을 유지하고 실험 seed는 42다. Train/Validation/Test 비율은 각각 81.61%/10.30%/8.09%다.
 
 설명이 빈 5,216건은 모두 Non-Sarcasm이므로 필수값 결측으로 제거하지 않았다. 저장된 token_lengths.json에서 Train 토큰 길이 중앙값 94, 95백분위 145, 최대 250을 확인했다. 최대 입력 길이는 152이고 잘린 입력은 Train 379건, Validation 35건, Test 42건이다.
 
@@ -98,13 +98,13 @@ AI의 예측은 상대방의 진짜 속마음을 확정하는 것이 아닙니�
 
 ## 7. 배포
 
-GitHub에 코드와 최신 캡처를 공개했다. 가중치는 Hugging Face nanlhj/noonchicoach-koelectra 비공개 저장소에 보관한다. 현재 계정에서 Docker Space는 유료 플랜을 요구해 생성하지 않았다. 무료 Cloudflare Quick Tunnel의 임시 공개 URL에서 실제 KoELECTRA 90.8점 추론과 입력 검증을 확인했다. 로컬 컴퓨터 및 서버·터널의 지속 실행이 필요하다.
+GitHub에 코드와 최신 캡처를 공개했다. 가중치는 [비공개 Hugging Face 모델 저장소](https://huggingface.co/nanlhj/noonchicoach-koelectra)에 보관한다. KoCoSa 기반 가중치의 공개 조건이 미확인되어 공개 재배포하지 않는다. 채점자는 저장소 소유자에게 별도 접근 권한을 받아야 하며 링크만으로 내려받을 수 없다. baseline.joblib도 제출본에서 제외하므로 기존 별도 보관 파일이 필요하다. 현재 계정에서 Docker Space는 유료 플랜을 요구해 생성하지 않았다. 무료 Cloudflare Quick Tunnel의 임시 공개 URL에서 실제 KoELECTRA 90.8점 추론과 입력 검증을 확인했다. 2026-11-20에 새 데모 URL로 갱신했다. 사용자가 새 주소의 외부 접속과 실제 KoELECTRA 분석 동작을 확인했으며 이번 점검에서도 HTTP 200과 KoELECTRA 화면 표시를 확인했다. 이 주소는 영구 배포가 아니다. 로컬 컴퓨터 및 Flask 서버·Cloudflare 터널이 계속 실행되어야 접속할 수 있고 터널을 재시작하면 URL이 변경된다. 채점 종료까지 접속 유지가 필요하다.
 
 ## 8. 실행 방법
 
 ### 제출 전 확인
 
-제출처는 사이버캠퍼스 12차시-기말프로젝트이며 마감은 12차시 오전 9시다. 달력 날짜는 사이버캠퍼스에서 확인한다. 제출 파일명은 기말-202439751-이현지.zip이다. ZIP에는 README와 동일한 포트폴리오 PDF, 실행 출력이 유지된 코드, submission.json을 포함한다. 100MB 초과 모델·데이터는 외부 링크로 제공하고 API 키를 업로드하지 않는다. 공개 GitHub와 데모 URL은 채점 종료까지 유지한다. 현재 저장된 포트폴리오 PDF와 제출 ZIP, submission.json에는 과거 상태가 남아 있어 최종 갱신이 필요하다.
+제출처는 사이버캠퍼스 12차시-기말프로젝트이며 마감은 12차시 오전 9시다. 달력 날짜는 사이버캠퍼스에서 확인한다. 제출 파일명은 기말-202439751-이현지.zip이다. ZIP에는 README와 동일한 포트폴리오 PDF, 실행 출력이 유지된 코드, submission.json을 포함한다. 100MB 초과 모델·데이터는 외부 링크로 제공하고 API 키를 업로드하지 않는다. 공개 GitHub와 데모 URL은 채점 종료까지 유지한다. 최종 제출본에는 이 README와 동일한 내용의 portfolio.pdf, 소스 코드, 보존된 평가 CSV·그래프·화면 캡처, submission.json이 포함된다. 가중치·원본 및 가공 데이터·가상환경·비밀정보는 제외한다. Colab 전체 학습 로그와 실행 출력이 채워진 원본 노트북은 현재 미확보이므로 출력 셀을 임의로 생성하지 않았다.
 
 기본 의존성은 requirements.txt, Colab은 requirements-colab.txt를 사용한다. [통합 노트북](NoonchiCoach_Complete_Colab.ipynb)과 [Colab 안내](COLAB_GUIDE.md)를 참고한다. 기존 모델로 추론할 때 재학습은 필요하지 않다.
 
@@ -129,7 +129,7 @@ $env:MKL_NUM_THREADS = '4'
 
 다른 컴퓨터에서는 NOONCHI_MODEL_PATH를 그 컴퓨터의 final 폴더로 바꾼다. final 상위 token_lengths.json도 필요하다. 베이스라인은 NOONCHI_MODEL을 baseline으로 바꾸고 NOONCHI_MODEL_PATH 환경 변수를 제거해 실행한다. 환경을 다시 구성할 때는 Python 3.13 가상환경에서 requirements-koelectra.txt를 설치한다. 검증 환경은 위 Python 및 패키지 버전과 같다.
 
-정상 입력·상황 선택·입력 유지·40~60점 안내·HTML 이스케이프가 통과했다. 빈 입력과 길이 초과는 400, 요청 크기 초과는 안내와 함께 413으로 처리됐다. KoELECTRA 모델 경로 오류는 시작 실패로 드러나며 다른 모델로 자동 대체되지 않는다. 상세 검증 기록은 비공개 작업 폴더에서 보관한다. Colab 평가 지표는 재계산하지 않았다.
+정상 입력·상황 선택·입력 유지·40~60점 안내·HTML 이스케이프가 통과했다. 빈 입력과 길이 초과는 400, 요청 크기 초과는 안내와 함께 413으로 처리됐다. KoELECTRA 모델 경로 오류는 시작 실패로 드러나며 다른 모델로 자동 대체되지 않는다. 원본 상세 검증 기록은 작업 폴더에서 보관하며 제출본에는 보존된 평가 CSV와 화면 캡처를 포함한다. Colab 평가 지표는 재계산하지 않았다.
 
 ## 9. Lessons Learned
 
