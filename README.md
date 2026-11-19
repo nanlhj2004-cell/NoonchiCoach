@@ -6,7 +6,7 @@
 
 학번 202439751 · 이름 이현지. 제출 안내의 필수 프로젝트 식별 정보로 기재한다.
 
-한국어 대화의 비꼼 표현 가능성을 분류하고 확인형 답변을 제안하는 개인 머신러닝 프로젝트다. 사용자가 Google Colab 학습·평가와 Flask KoELECTRA 추론 완료를 보고했다. 이번 점검에서 실제 평가 CSV와 가중치·토크나이저를 확인했다. 전용 Python 환경을 복구하고 실제 ElectraForSequenceClassification 로딩과 Flask 추론을 검증했다. GitHub와 공개 데모 URL은 미확인이다.
+한국어 대화의 비꼼 표현 가능성을 분류하고 확인형 답변을 제안하는 개인 머신러닝 프로젝트다. 사용자가 Google Colab 학습·평가와 Flask KoELECTRA 추론 완료를 보고했다. 이번 점검에서 실제 평가 CSV와 가중치·토크나이저를 확인했다. 전용 Python 환경을 복구하고 실제 ElectraForSequenceClassification 로딩과 Flask 추론을 검증했다. [GitHub 공개 코드](https://github.com/nanlhj2004-cell/NoonchiCoach) · [임시 공개 데모](https://ran-lenses-success-painting.trycloudflare.com). 데모는 로컬 컴퓨터와 Flask 및 Cloudflare 터널이 실행 중인 동안 동작한다. 재시작 시 URL이 변경되므로 영구 호스팅은 별도로 확보해야 한다.
 
 ## 1. 문제 정의
 
@@ -98,7 +98,7 @@ AI의 예측은 상대방의 진짜 속마음을 확정하는 것이 아닙니�
 
 ## 7. 배포
 
-공개 URL은 미확인이다. Hugging Face Spaces용 Dockerfile은 준비돼 있다. 공개 전 모델 로딩과 데이터·가중치 공개 조건을 확인한다.
+GitHub에 코드와 최신 캡처를 공개했다. 가중치는 Hugging Face nanlhj/noonchicoach-koelectra 비공개 저장소에 보관한다. 현재 계정에서 Docker Space는 유료 플랜을 요구해 생성하지 않았다. 무료 Cloudflare Quick Tunnel의 임시 공개 URL에서 실제 KoELECTRA 90.8점 추론과 입력 검증을 확인했다. 로컬 컴퓨터 및 서버·터널의 지속 실행이 필요하다.
 
 ## 8. 실행 방법
 
