@@ -1,0 +1,114 @@
+{
+  "context": {
+    "selection": {
+      "C": 4,
+      "class_weight": null,
+      "validation_macro_f1": 0.6574187128059282
+    },
+    "trials": [
+      {
+        "C": 0.25,
+        "class_weight": null,
+        "validation_macro_f1": 0.6049641148325359
+      },
+      {
+        "C": 0.25,
+        "class_weight": "balanced",
+        "validation_macro_f1": 0.6562814638837038
+      },
+      {
+        "C": 1,
+        "class_weight": null,
+        "validation_macro_f1": 0.6559130684103374
+      },
+      {
+        "C": 1,
+        "class_weight": "balanced",
+        "validation_macro_f1": 0.6558585369023411
+      },
+      {
+        "C": 4,
+        "class_weight": null,
+        "validation_macro_f1": 0.6574187128059282
+      },
+      {
+        "C": 4,
+        "class_weight": "balanced",
+        "validation_macro_f1": 0.6513019904401798
+      }
+    ],
+    "test": {
+      "accuracy": 0.686595949855352,
+      "macro_f1": 0.6669269121869024,
+      "precision": 0.6703755215577191,
+      "recall": 0.8456140350877193,
+      "fpr": 0.5074946466809421,
+      "confusion": [
+        [
+          230,
+          237
+        ],
+        [
+          88,
+          482
+        ]
+      ]
+    }
+  },
+  "response_only": {
+    "selection": {
+      "C": 1,
+      "class_weight": "balanced",
+      "validation_macro_f1": 0.7050456092579986
+    },
+    "trials": [
+      {
+        "C": 0.25,
+        "class_weight": null,
+        "validation_macro_f1": 0.6875948004501493
+      },
+      {
+        "C": 0.25,
+        "class_weight": "balanced",
+        "validation_macro_f1": 0.7020209696408237
+      },
+      {
+        "C": 1,
+        "class_weight": null,
+        "validation_macro_f1": 0.696308428451935
+      },
+      {
+        "C": 1,
+        "class_weight": "balanced",
+        "validation_macro_f1": 0.7050456092579986
+      },
+      {
+        "C": 4,
+        "class_weight": null,
+        "validation_macro_f1": 0.6873600466056182
+      },
+      {
+        "C": 4,
+        "class_weight": "balanced",
+        "validation_macro_f1": 0.6938349814585909
+      }
+    ],
+    "test": {
+      "accuracy": 0.7550626808100289,
+      "macro_f1": 0.7487005602283656,
+      "precision": 0.75,
+      "recall": 0.8315789473684211,
+      "fpr": 0.33832976445396146,
+      "confusion": [
+        [
+          309,
+          158
+        ],
+        [
+          96,
+          474
+        ]
+      ]
+    }
+  }
+}
