@@ -1,0 +1,7 @@
+*
+!Dockerfile
+!requirements-spaces.txt
+!app.py
+!common.py
+!inference.py
+!serve_spaces.py

@@ -1,0 +1,5 @@
+torch==2.6.0
+transformers==4.51.3
+Flask
+joblib
+scikit-learn==1.7.2

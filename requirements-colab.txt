@@ -1,0 +1,10 @@
+pandas==2.2.3
+pyarrow>=19,<24
+scikit-learn==1.7.2
+matplotlib
+joblib
+Flask
+# Use Colab's CUDA-enabled PyTorch (2.6 or newer).
+transformers==4.51.3
+datasets==3.5.0
+accelerate==1.6.0
